@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="company-profile.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Bisa Cerdas Kursus Online</h1>
+            </div>
+            <ul class="nav-links">
+        <li><a href="LandingPage.php">Home</a></li>
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <li><a href="src/views/user_list.php">Users List</a></li>
+            <li><a href="src/controller/logout.php">Logout</a></li>
+        <?php else: ?>
+            <li><a href="public/login.php">Login</a></li>
+            <li><a href="public/index.php">Register</a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
+        <div class="hero-section">
+            <h1>Selamat Datang di Bisa Cerdas</h1>
+            <p>Ayo Terhubung Dengan Seluruh Dunia Dengan Belajar Bahasa Inggris!</p>
+            <a href="public/index.php" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+    <section class="features-section">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Register Users</h3>
+                <p>Quick and easy user registration system to manage your users efficiently.</p>
+            </div>
+            <div class="feature-item">
+                <h3>View Users</h3>
+                <p>Easily view all registered users in a simple and organized list.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Edit & Delete Users</h3>
+                <p>Manage users with the ability to update or delete user data when necessary.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p>&copy; 2024 Bisa Cerdas. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
